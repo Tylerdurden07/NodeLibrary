@@ -1,10 +1,11 @@
-// app js
+// app js which runs as server
 var express=require('express');
 
 var app=express();
 
 
 app.use(express.static('public'));
+// setting jade as rendering engine
 app.set('views','./src/views');
 app.set('view engine','jade');
 app.get('/',function(req,res){
